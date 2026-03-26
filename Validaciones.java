@@ -25,4 +25,25 @@ public class Validaciones {
         }
         return numero;
     }
+
+    public int Pedirdato(int opt,Scanner sc) {
+        Validaciones m = new Validaciones();
+        switch (opt) {
+            case 1:
+                System.out.println("Ingrese El numero a Modificar");
+                opt = m.ValidarEntero(sc);
+                break;
+            case 2:
+                System.out.println("Ingrese El nuevo numero Modificado");
+                opt = m.ValidarEntero(sc);
+                break;
+
+            default:
+                System.out.println("Ingrese el numero a eliminar");
+                opt = m.ValidarEntero(sc);
+                break;
+        }
+        return opt;
+
+    }
 }

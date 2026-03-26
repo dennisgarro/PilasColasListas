@@ -79,4 +79,47 @@ public class Metodos {
         System.out.println();
     }
 
+    public Stack<ObjDato> ModificarPila(Stack<ObjDato> p, int numero, Scanner sc) {
+
+        for (ObjDato o : p) {
+            if (o.getNumero() == numero) {
+                o.setNumero(v.Pedirdato(2, sc));
+            }
+        }
+        return p;
+    }
+
+    public Queue<ObjDato> ModificarCola(Queue<ObjDato> p, int numero, Scanner sc) {
+        for (ObjDato o : p) {
+            if (o.getNumero() == numero) {
+                o.setNumero(v.Pedirdato(2, sc));
+            }
+        }
+        return p;
+    }
+
+    public LinkedList<ObjDato> Modificarlista(LinkedList<ObjDato> p, int numero, Scanner sc) {
+        for (ObjDato o : p) {
+            if (o.getNumero() == numero) {
+                o.setNumero(v.Pedirdato(2, sc));
+            }
+        }
+        return p;
+    }
+
+    public Stack<ObjDato> EliminarPila(Stack<ObjDato> p, int numero) {
+        p.removeIf(obj -> obj.getNumero() == numero);
+        return p;
+    }
+
+    public Queue<ObjDato> EliminarCola(Queue<ObjDato> p, int numero) {
+        p.removeIf(obj -> obj.getNumero() == numero);
+        return p;
+    }
+
+    public LinkedList<ObjDato> Eliminarlista(LinkedList<ObjDato> p, int numero) {
+        p.removeIf(obj -> obj.getNumero() == numero);
+        return p;
+    }
+
 }
